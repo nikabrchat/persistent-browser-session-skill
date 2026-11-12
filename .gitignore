@@ -1,0 +1,51 @@
+# Never commit a real browser profile, session artifact, or secret.
+# This skill ships only the mechanism (scripts/docs/tests/fixtures) --
+# never a real Chromium profile, cookie jar, or mail content.
+
+profiles/
+profile/
+*.profile/
+cookies/
+cookies.json
+storageState/
+storageState.json
+storage_state.json
+screenshots/
+*.png
+*.jpg
+*.jpeg
+logs/
+*.log
+downloads/
+state/
+session_state/
+*.session
+
+# Credentials and secrets, in any common shape. Scoped to credential
+# file names/extensions rather than a bare wildcard around the words
+# "secret" or "password", which would also match this repo's own
+# legitimate source files (scripts/secret_scan.py, tests/test_secret_scan.py).
+.env
+.env.*
+*.pem
+*.key
+*.token
+*.credentials
+credentials.json
+credentials.yaml
+credentials.yml
+secrets.json
+secrets.yaml
+secrets.yml
+password.txt
+passwords.txt
+.netrc
+.npmrc
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OS / editor noise
+.DS_Store
